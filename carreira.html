@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carreira - Melanie Martinez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      opacity: 1;
+      border-bottom: 2px solid #ff3da7;
+    }
+
+    .contato-btn {
+      background-color: white;
+      color: black;
+      padding: 0.4rem 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .contato-btn:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 60px;
+      color: #ff77cc;
+    }
+
+    .linha-do-tempo {
+      border-left: 4px solid #ff77cc;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .evento {
+      position: relative;
+    }
+
+    .evento::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -18px;
+      width: 16px;
+      height: 16px;
+      background-color: #ff77cc;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .evento h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .evento p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .evento h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Logo Melanie Martinez">
+    </div>
+    <nav>
+      <a href="home.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="discografia.html">Discografia</a>
+      <a href="carreira.html" class="active">Carreira</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+    <a href="contato.html" class="contato-btn">CONTATO</a>
+  </header>
+
+  <main>
+    <h1>Linha do Tempo da Carreira</h1>
+    <div class="linha-do-tempo">
+
+      <div class="evento">
+        <h2>2012 - The Voice</h2>
+        <p>Melanie ganhou destaque nacional ao participar da terceira temporada do programa The Voice USA. Mesmo não vencendo, sua voz marcante e estilo excêntrico chamaram atenção do público e da crítica.</p>
+      </div>
+
+      <div class="evento">
+        <h2>2014 - EP "Dollhouse"</h2>
+        <p>Após o programa, Melanie lançou seu primeiro EP independente, <strong>Dollhouse</strong>, que incluía a canção homônima e outras faixas como "Carousel", já evidenciando seu estilo visual e temático peculiar.</p>
+      </div>
+
+      <div class="evento">
+        <h2>2015 - Álbum "Cry Baby"</h2>
+        <p>Seu álbum de estreia, <strong>Cry Baby</strong>, foi um sucesso mundial. Com uma estética de infância distorcida e letras sobre traumas, relacionamentos e críticas sociais, consolidou seu lugar como artista alternativa.</p>
+      </div>
+
+      <div class="evento">
+        <h2>2019 - "K-12"</h2>
+        <p>Melanie expandiu seu universo artístico com o álbum <strong>K-12</strong>, acompanhado por um filme musical. O projeto abordou temas como bullying, sexualização e opressão dentro do sistema escolar.</p>
+      </div>
+
+      <div class="evento">
+        <h2>2023 - "Portals"</h2>
+        <p>Após anos em silêncio, Melanie retornou com o enigmático <strong>Portals</strong>, onde apresenta uma estética mais sombria e mística, representando uma nova fase de transformação artística e pessoal.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Fã site dedicado a Melanie Martinez. Todos os direitos reservados.</p>
+      <p>Site criado por João Pedro e Livia Neves com fins educacionais e de homenagem.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

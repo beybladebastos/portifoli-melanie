@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Discografia - Melanie Martinez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-wrap: wrap;
+      z-index: 10;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      margin-right: 40px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      opacity: 1;
+      border-bottom: 2px solid #ff3da7;
+    }
+
+    .contato-btn {
+      background-color: white;
+      color: black;
+      padding: 0.4rem 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .contato-btn:hover {
+      background-color: #ddd;
+    }
+
+    .discografia {
+      padding: 140px 10% 60px 10%;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .item .text {
+      max-width: 600px;
+    }
+
+    .item .text h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .item .text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+      margin-top: 100px;
+    }
+
+    .footer-content p + p {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .logo img {
+        height: 32px;
+      }
+
+      .discografia {
+        padding: 100px 5% 40px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Logo Melanie Martinez">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="discografia.html" class="active">Discografia</a></li>
+        <li><a href="carreira.html">Carreira</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+    <a href="contato.html" class="contato-btn">CONTATO</a>
+  </header>
+
+  <section class="discografia">
+    <div class="section">
+      <h2>Álbuns</h2>
+      <div class="item">
+        <img src="imagens/crybaby.png" alt="Cry Baby">
+        <div class="text">
+          <h3>Cry Baby (2015)</h3>
+          <p>O álbum de estreia de Melanie Martinez traz um conceito baseado na personagem Cry Baby, que representa uma versão exagerada e infantilizada da cantora. Com sonoridade pop alternativo e elementos dark, o disco inclui sucessos como Dollhouse, Pity Party, Soap e Mad Hatter. A estética e as letras exploram temas como insegurança, relacionamentos conturbados e traumas infantis.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="imagens/k-12 album.png" alt="K-12">
+        <div class="text">
+          <h3>K-12 (2019)</h3>
+          <p>Lançado junto a um filme musical escrito e dirigido por Melanie, K-12 segue a história de Cry Baby dentro de uma escola mágica e repressiva, representando críticas ao sistema educacional e à sociedade. O álbum mantém a estética única da cantora, misturando pop experimental e elementos cinematográficos. Canções como Show & Tell, Strawberry Shortcake e Drama Club abordam temas como misoginia, pressão social e autoaceitação.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="imagens/portals-album.png" alt="PORTALS">
+        <div class="text">
+          <h3>PORTALS (2023)</h3>
+          <p>Marcando uma nova fase na carreira de Melanie, Portals traz uma estética mais madura e sobrenatural, simbolizando um renascimento artístico. O álbum abandona a história de Cry Baby e introduz um novo personagem inspirado na vida após a morte. As músicas exploram temas como reencarnação, autodescoberta e espiritualidade, com singles como Death e Void.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>EPs</h2>
+      <div class="item">
+        <img src="imagens/dollhouse sing.png" alt="Dollhouse EP">
+        <div class="text">
+          <h3>Dollhouse (2014)</h3>
+          <p>Primeiro EP oficial de Melanie, Dollhouse apresenta quatro faixas que deram início à sua identidade musical única. Com destaque para Dollhouse e Carousel (que foi usada na série American Horror Story: Freak Show), o EP explora temas como disfunções familiares e ilusões da sociedade.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="imagens/afterschool.png" alt="After School">
+        <div class="text">
+          <h3>After School (2020)</h3>
+          <p>EP complementar ao K-12, trazendo faixas mais pessoais e introspectivas. O destaque fica para The Bakery, que fala sobre sua experiência trabalhando em uma padaria antes da fama. As músicas apresentam um som mais experimental e reflexivo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Singles</h2>
+      <div class="item">
+        <img src="imagens/gingerbread man.png" alt="Gingerbread Man">
+        <div class="text">
+          <h3>Gingerbread Man (2017)</h3>
+          <p>"Gingerbread Man" foi lançado inicialmente no SoundCloud como um presente de Natal para os fãs. A música satiriza o desejo por um parceiro ideal, usando a metáfora de um boneco de gengibre para criticar homens que parecem perfeitos, mas são artificiais e egoístas. A sonoridade combina elementos doces e sombrios, marca registrada da era Cry Baby.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="imagens/firedrill-ep.png" alt="Fire Drill">
+        <div class="text">
+          <h3>Fire Drill (2020)</h3>
+          <p>"Fire Drill" foi lançada oficialmente após aparecer nos créditos finais do filme K-12. A canção fala sobre autenticidade, alienação social e resistência à pressão para se encaixar. Com letras afiadas, Melanie aborda o julgamento alheio e a superficialidade das aparências, reforçando seu posicionamento contra padrões impostos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Fã site dedicado a Melanie Martinez. Todos os direitos reservados.</p>
+      <p>Site criado por João Pedro e Livia Neves com fins educacionais e de homenagem.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
