@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato | Melanie Martinez</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
       font-family: 'Inter', sans-serif;
       color: white;
       background-color: black;
-      background-size: cover;
       overflow-x: hidden;
     }
 
@@ -74,13 +73,38 @@
 
     .contato-container {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    .imagem {
+    .video {
       flex: 1;
-      background: url('melanie.png') no-repeat center center;
-      background-size: cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 12px;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      backdrop-filter: blur(5px);
+      transition: background 0.3s ease;
+    }
+
+    .video-btn:hover {
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     .formulario {
@@ -88,7 +112,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 40px;
+      padding: 40px;
+      background-color: black;
     }
 
     .formulario h1 {
@@ -206,9 +231,8 @@
         flex-direction: column;
       }
 
-      .imagem {
+      .video {
         height: 300px;
-        flex: none;
       }
 
       .formulario {
@@ -241,6 +265,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">
       <img src="imagens/logo.png" alt="Logo Melanie Martinez">
@@ -258,7 +283,11 @@
   </header>
 
   <div class="contato-container">
-    <div class="imagem"></div>
+    <div class="video">
+      <video id="melanieVideo" src="videos/melanie-video.mp4" autoplay loop muted></video>
+      <button id="toggleVideo" class="video-btn"><i class="fas fa-pause"></i></button>
+    </div>
+
     <div class="formulario">
       <h1>CONTRATE-ME</h1>
       <form>
@@ -286,11 +315,11 @@
       <div class="redes-sociais">
         <h2>MINHAS REDES SOCIAIS</h2>
         <div class="icones">
-          <a href=""><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
-          <a href="#"><i class="fab fa-spotify"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/melanielbbh"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/littlebodybigheart/?hl=pt-br"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@littlebodybigheart"><i class="fab fa-tiktok"></i></a>
+          <a href="https://open.spotify.com/intl-pt/artist/63yrD80RY3RNEM2YDpUpO8"><i class="fab fa-spotify"></i></a>
+          <a href="https://www.facebook.com/melaniemartinezmusic/?locale=pt_BR"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -302,5 +331,24 @@
       <p>Site criado por João Pedro e Livia Neves com fins educacionais e de homenagem.</p>
     </div>
   </footer>
+
+  <script>
+    const video = document.getElementById("melanieVideo");
+    const btn = document.getElementById("toggleVideo");
+    const icon = btn.querySelector("i");
+
+    btn.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        icon.classList.remove("fa-play");
+        icon.classList.add("fa-pause");
+      } else {
+        video.pause();
+        icon.classList.remove("fa-pause");
+        icon.classList.add("fa-play");
+      }
+    });
+  </script>
+
 </body>
 </html>
